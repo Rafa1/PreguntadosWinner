@@ -25,6 +25,7 @@ class PreguntadosMaster(controller.Master):
         pprint (dir(msg))
         print "Content code dir: "
         pprint (dir(msg.content))
+        msg.content.decode
         print "Response code: %s" % msg.code 
         print "Response q: "
         pprint(dir(msg.q))
