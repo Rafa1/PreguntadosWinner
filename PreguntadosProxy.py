@@ -62,10 +62,11 @@ class PreguntadosMaster(controller.Master):
                 print "=================="
                 print "%s " % (normalq['text'])
                 # pprint(normalq)
-                correcta = int(normalq['correct_answer'])
+                correcta_normal = int(normalq['correct_answer'])
+                correcta_powerup = in(powerupq['correct_answer'])
                 cont = 0
                 for answer in normalq['answers']:
-                    if cont == correcta:
+                    if cont == correcta_normal:
       #                  print colored("%s. %s" % (cont,answer),"green")
                         print (Fore.GREEN + "%s. %s" % (cont,answer))
                     else:
@@ -78,7 +79,7 @@ class PreguntadosMaster(controller.Master):
                 # pprint(powerupq)
                 cont = 0
                 for answer in powerupq['answers']:
-                    if cont == correcta:
+                    if cont == correcta_powerup:
       #                  print colored("%s. %s" % (cont,answer),"green")
                         print (Fore.GREEN + "%s. %s" % (cont,answer))
                     else:
